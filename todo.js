@@ -1,11 +1,19 @@
 let allTodo=new Array();
 let completeTodo=new Array();
 
+// document.getElementById('area').addEventListener("onC\hange", function (event) {
+//     if (event.keyCode === 13) {
+//         add();
+//     }
+// });
+
+
+
 function add() {
     let task = document.getElementById("area");
     let taskList = document.getElementById("items");
     
-    if (task.value != '') {
+    if (task.value.trim() != '') {
         let para = document.createElement('p');
         
         para.style.margin = '7px 0px 5px 0px'
@@ -81,12 +89,12 @@ function add() {
 
 }
 
+document.querySelector("#area").addEventListener("keyup", function(e){
+ if(e.key === "Enter"){
+    add();
+ }
+});
 
-// document.querySelector("#area").addEventListener("keydown", function (event) {
-//     if (event.keyCode === 13) {
-//         add();
-//     }
-// });
 
 
 // toButton.addEventListener('click',function(){
